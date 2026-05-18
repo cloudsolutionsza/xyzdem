@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050816;
+  color: white;
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  background: rgba(0, 0, 0, 0.92);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+.navbar__container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar__logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#navbar__logo i,
+.tagline,
+.services__card i,
+.services__card h2,
+.benefit__item i,
+.stat__card h2,
+.contact__info i {
+  color: #00bfff;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar__item,
+.navbar__btn {
+  list-style: none;
+}
+
+.navbar__links,
+.button {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navbar__links:hover {
+  color: #00bfff;
+}
+
+.button {
+  padding: 11px 22px;
+  border: 1px solid #00bfff;
+  border-radius: 30px;
+}
+
+.button:hover {
+  background: #00bfff;
+}
+
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px auto;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 130px 20px 80px;
+}
+
+.hero__container,
+.section__container {
+  max-width: 1150px;
+  margin: auto;
+  text-align: center;
+}
+
+.tagline {
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.hero__heading {
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.hero__text,
+.section__intro,
+.discovery p {
+  color: #d4d4d4;
+  line-height: 1.7;
+}
+
+.hero__text {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 35px;
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #00bfff;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.hero__btn.secondary {
+  background: transparent;
+  border: 1px solid #00bfff;
+}
+
+.hero__btn:hover {
+  transform: scale(1.04);
+}
+
+.benefits,
+.services,
+.about,
+.discovery,
+.contact {
+  padding: 95px 8%;
+}
+
+.services,
+.discovery {
+  background: #0b1020;
+}
+
+.benefits h1,
+.services h1,
+.discovery h1,
+.contact h1 {
+  margin-bottom: 25px;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  text-align: center;
+}
+
+.section__intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.stats__grid,
+.services__wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 25px;
+}
+
+.stats__grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 35px;
+}
+
+.services__wrapper {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stat__card,
+.services__card,
+.benefit__item,
+.contact__info {
+  background: #121a2f;
+  border: 1px solid rgba(0, 191, 255, 0.15);
+  border-radius: 18px;
+}
+
+.stat__card,
+.services__card {
+  padding: 35px 25px;
+}
+
+.stat__card h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 12px;
+}
+
+.stat__card p,
+.services__card p,
+.benefit__item p,
+.about__content p,
+.contact__info p {
+  color: #d4d4d4;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.stat__card small {
+  color: #8aa8b8;
+  font-size: 0.8rem;
+}
+
+.benefit__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.benefit__item {
+  padding: 25px 18px;
+}
+
+.benefit__item h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.services__card i {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.services__card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about__content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 25px;
+}
+
+.about__content p {
+  margin-bottom: 18px;
+}
+
+.about__card {
+  background: linear-gradient(135deg, #001f3f, #00bfff);
+  padding: 45px 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.about__card i {
+  font-size: 5rem;
+  margin-bottom: 25px;
+}
+
+.about__card h2 {
+  margin-bottom: 15px;
+}
+
+.discovery p {
+  max-width: 750px;
+  margin: 0 auto 30px;
+}
+
+.contact__container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact__info {
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.contact__info p {
+  margin-bottom: 12px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+  margin-bottom: 18px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #121a2f;
+  color: white;
+  font-size: 0.95rem;
+}
+
+#contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contact-form button {
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #00bfff;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+#contact-form button:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  background: black;
+  text-align: center;
+  padding: 30px 20px;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .services__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #050816;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    display: none;
+    border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .services__wrapper,
+  .benefit__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits,
+  .services,
+  .about,
+  .discovery,
+  .contact {
+    padding: 75px 6%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #navbar__logo {
+    font-size: 1.1rem;
+  }
+
+  .hero__heading {
+    font-size: 2.25rem;
+  }
+
+  .stat__card,
+  .services__card,
+  .benefit__item {
+    padding: 25px 18px;
+  }
+}
